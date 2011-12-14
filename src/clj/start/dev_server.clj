@@ -16,7 +16,8 @@
         [start.api :only (remote-routes)]
         [start.config])
   (:require [net.cgrand.enlive-html :as html]
-            [library.reload :as reload])
+            [library.reload :as reload]
+            [cljs.repl.multi-browser :as multi-browser])
   (:import java.io.File))
 
 (defn- environment [uri]
@@ -75,6 +76,10 @@
   []
   (repl (repl-env)))
 
+(defn cljs-multi-repl
+  []
+  (repl (multi-browser/repl-env)))
+
 (comment
   ;; Start the server.
   (use 'start.dev-server :reload-all)
@@ -83,4 +88,8 @@
   (cljs-repl)
   ;; Don't forget to open the development page, or refresh it if it's
   ;; already open, or the REPL won't work
+
+  ;; Start a multi-browser REPL
+  (cljs-multi-repl)
+
   )
