@@ -16,8 +16,8 @@
         [one.sample.api :only (remote-routes)]
         [one.sample.config])
   (:require [net.cgrand.enlive-html :as html]
+            [one.reload :as reload]
             [cljs.repl.multi-browser :as multi-browser])
-            [one.reload :as reload])
   (:import java.io.File))
 
 (defn- environment [uri]
