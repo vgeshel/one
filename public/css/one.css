@@ -385,8 +385,7 @@ input[type="text"] {
 #name-input-label
 {
   display: block;
-  margin: 0 auto;
-  width: 254px;
+  width: 100%;
 }
 
 #name-input-label span
@@ -395,7 +394,8 @@ input[type="text"] {
   cursor: text;
   padding-top: 12px;
   position: absolute;
-  width: 254px;
+  text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
